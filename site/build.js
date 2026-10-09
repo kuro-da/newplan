@@ -17,7 +17,7 @@ const page = (file, title, desc, cur, body) => `<!doctype html>
 <nav>${NAV.map(([k, t]) => `<a href="${k}.html"${k === cur ? ' aria-current="page"' : ''}>${t}</a>`).join('')}</nav>
 </div></header>
 ${body}
-<footer><div class="w">ぴたチェック(請求書突合代行) 運営: 株式会社メディアビー ・ <a href="company.html">会社概要</a> ・ <a href="security.html">データの取り扱い</a></div></footer>
+<footer><div class="w">ぴたチェック(請求書突合代行) 運営: 株式会社メディアビー ・ <a href="company.html">会社概要</a> ・ <a href="security.html">データの取り扱い</a> ・ <a href="tokushoho.html">特定商取引法に基づく表記</a> ・ <a href="terms.html">利用規約</a> ・ <a href="privacy.html">プライバシーポリシー</a></div></footer>
 </body>
 </html>
 `;
@@ -69,7 +69,7 @@ out('price.html', '料金 | ぴたチェック', 'お試し無料、月額5万�
 <tr><td>スタンダード</td><td>50,000円</td><td>月200件まで</td></tr>
 <tr><td>プロ</td><td>100,000円</td><td>件数無制限 + 月次レポート</td></tr></table>
 <p class="mute">料金は予定です。ご契約前に、内容と金額を書面でご提示します。無理な勧誘や、自動での有料切り替えは行いません。</p>
-<a class="btn" href="contact.html">無料で試す</a></div></section>`);
+<h2 style="margin-top:34px">お支払い方法</h2><table><tr><th>方法</th><th>内容</th></tr><tr><td>銀行振込</td><td>月末締め、翌月末までにお振込み(請求書を発行します)。振込手数料はお客様のご負担です。</td></tr><tr><td>クレジットカード(準備中)</td><td>ネット決済サービスの準備ができしだい、ご利用いただけます。</td></tr></table><p class="mute">無料お試しでは、お支払い情報のご入力は不要です。</p><a class="btn" href="contact.html">無料で試す</a></div></section>`);
 
 out('security.html', '安心への取り組み | ぴたチェック', 'お預かりするデータの取り扱いについて。', 'security', `
 <section><div class="w"><h1 style="font-size:32px">安心への取り組み</h1>
@@ -112,3 +112,36 @@ out('contact.html', 'お問い合わせ | ぴたチェック', '無料お試し�
 <p class="mute">いただいた情報は、お問い合わせへの返信の目的にのみ使用します。</p>
 <button class="btn" style="border:0;cursor:pointer;font:inherit;font-weight:700;margin-top:10px">送信する</button>
 </form></div></section>`);
+
+const D = '<div class="note">【下書き】公開前に、内容の確認と、必要に応じて専門家(弁護士・税理士など)による確認を行います。【】は社長が入力します。</div>';
+out('tokushoho.html', '特定商取引法に基づく表記 | ぴたチェック', '特定商取引法に基づく表記(下書き)。', 'x', `
+<section><div class="w"><h1 style="font-size:32px">特定商取引法に基づく表記</h1>${D}
+<table style="margin-top:16px">
+<tr><th>販売事業者</th><td>株式会社メディアビー</td></tr>
+<tr><th>運営責任者</th><td>【代表者名】</td></tr>
+<tr><th>所在地</th><td>【所在地】</td></tr>
+<tr><th>連絡先</th><td>【電話番号・メールアドレス】</td></tr>
+<tr><th>販売価格</th><td>料金ページに記載(税別)。消費税は別途申し受けます。</td></tr>
+<tr><th>代金の支払い時期・方法</th><td>月末締め、翌月末までに銀行振込。クレジットカードは準備中。</td></tr>
+<tr><th>サービスの提供時期</th><td>ご契約後、データをお預かりしてから【○営業日】以内に結果をお返しします。</td></tr>
+<tr><th>解約・返金</th><td>【解約の条件(例: 月末までに申し出れば翌月から停止)と、返金の取り扱いを入力】</td></tr>
+</table></div></section>`);
+
+out('terms.html', '利用規約 | ぴたチェック', '利用規約(下書き)。', 'x', `
+<section><div class="w"><h1 style="font-size:32px">利用規約</h1>${D}
+<h3 style="margin-top:20px">第1条 サービスの内容</h3><p>当社は、お客様から提供された発注データと請求書を突き合わせ、差異の疑いがある箇所をご報告します。</p>
+<h3 style="margin-top:20px">第2条 結果の位置づけ</h3><p>ご報告は、人による確認を助ける参考情報です。支払い・請求に関する最終的な判断と責任は、お客様にあります。当社は結果の完全性・正確性を保証しません。</p>
+<h3 style="margin-top:20px">第3条 お預かりするデータ</h3><p>当社は、お預かりしたデータを、本サービスの提供の目的にのみ利用します。保管・削除の方法は、ご契約時に書面でお示しします。</p>
+<h3 style="margin-top:20px">第4条 料金と支払い</h3><p>料金と支払い方法は、料金ページおよびご契約時の書面によります。</p>
+<h3 style="margin-top:20px">第5条 責任の範囲</h3><p>【損害賠償の範囲・上限を専門家と相談のうえ入力】</p>
+<h3 style="margin-top:20px">第6条 解約</h3><p>【解約の条件を入力】</p>
+</div></section>`);
+
+out('privacy.html', 'プライバシーポリシー | ぴたチェック', 'プライバシーポリシー(下書き)。', 'x', `
+<section><div class="w"><h1 style="font-size:32px">プライバシーポリシー</h1>${D}
+<h3 style="margin-top:20px">取得する情報</h3><p>お問い合わせ時の会社名・ご担当者名・メールアドレス、および、サービス提供のためにお預かりする発注データ・請求書。</p>
+<h3 style="margin-top:20px">利用目的</h3><p>お問い合わせへの返信、サービスの提供、ご契約・請求に関する連絡。</p>
+<h3 style="margin-top:20px">第三者への提供・委託</h3><p>【AI事業者・決済サービスなど、データや情報を委託する先と、その内容を入力】法令に基づく場合を除き、本人の同意なく第三者へ提供しません。</p>
+<h3 style="margin-top:20px">保管と削除</h3><p>【保管場所・保管期間・削除の手順を入力】</p>
+<h3 style="margin-top:20px">お問い合わせ窓口</h3><p>【連絡先を入力】</p>
+</div></section>`);
