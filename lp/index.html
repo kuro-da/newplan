@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>請求書チェック代行 | 株式会社メディアビー</title>
+<meta name="description" content="取引先の請求書を発注データと突き合わせ、1円単位の差異・二重請求を見つけます。初月10件まで無料。">
+<style>
+  :root { --bg:#fff; --ink:#1d2330; --mute:#5b6477; --line:#dfe3ea; --accent:#2457d6; --soft:#f3f6fd; }
+  @media (prefers-color-scheme: dark) { :root { --bg:#14171d; --ink:#e8eaf0; --mute:#9aa3b5; --line:#2e3441; --accent:#7ba3ff; --soft:#1c2029; } }
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--bg); color:var(--ink); font:16px/1.8 "Yu Gothic UI","Meiryo",sans-serif; }
+  .w { max-width:820px; margin:0 auto; padding:0 20px; }
+  header { padding:56px 0 36px; }
+  h1 { font-size:clamp(26px,5vw,38px); line-height:1.4; margin:0 0 14px; }
+  .lead { color:var(--mute); font-size:17px; margin:0 0 24px; }
+  .cta { display:inline-block; background:var(--accent); color:#fff; text-decoration:none; font-weight:700; padding:14px 28px; border-radius:8px; }
+  section { padding:30px 0; border-top:1px solid var(--line); }
+  h2 { font-size:22px; margin:0 0 12px; }
+  .grid { display:grid; gap:14px; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); }
+  .box { background:var(--soft); border:1px solid var(--line); border-radius:10px; padding:14px 16px; }
+  .box b { display:block; margin-bottom:4px; }
+  table { border-collapse:collapse; width:100%; font-size:15px; }
+  th,td { border:1px solid var(--line); padding:8px 10px; text-align:left; }
+  th { background:var(--soft); }
+  .mute { color:var(--mute); font-size:14px; }
+  footer { padding:30px 0 60px; border-top:1px solid var(--line); }
+</style>
+</head>
+<body>
+<div class="w">
+  <header>
+    <h1>請求書の「1円のズレ」と「二重請求」を、毎月自動で見つけます</h1>
+    <p class="lead">発注データと取引先の請求書をAIが突き合わせ、間違いの疑いがある行だけを一覧にします。経理の確認時間を減らします。</p>
+    <a class="cta" href="#contact">初月10件まで無料で試す</a>
+  </header>
+
+  <section>
+    <h2>こんなお悩みはありませんか</h2>
+    <div class="grid">
+      <div class="box"><b>月末に確認が集中する</b>請求書と発注書を、目で見て1行ずつ照合している。</div>
+      <div class="box"><b>単価違いに後から気づく</b>支払ってしまってから、発注時の単価と違っていたと分かる。</div>
+      <div class="box"><b>二重請求が怖い</b>同じ納品が2回請求されても、見落とすことがある。</div>
+    </div>
+  </section>
+
+  <section>
+    <h2>見つけられる間違い</h2>
+    <table>
+      <tr><th>種類</th><th>例</th></tr>
+      <tr><td>単価の違い</td><td>発注 18円 → 請求 20円</td></tr>
+      <tr><td>二重請求・数量超過</td><td>発注 50個に対し 100個分を請求</td></tr>
+      <tr><td>キャンセル済みの請求</td><td>取り消した発注が請求に載っている</td></tr>
+      <tr><td>端数・消費税の計算違い</td><td>切り捨てのはずが四捨五入で1円ずれる</td></tr>
+    </table>
+    <p class="mute">判断できないもの(商品コード不明、単位違いなど)は、推測せず「要確認」として人に返します。</p>
+  </section>
+
+  <section>
+    <h2>安心の取り扱い</h2>
+    <ul>
+      <li>最終判断は、必ず御社の担当者が行います。AIは「疑いのある行」を挙げます。</li>
+      <li>契約前に、データの取り扱い・保管・削除の方法を書面でご説明します。</li>
+      <li>まず1〜2枚の請求書で、無料でお試しいただけます。</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>料金</h2>
+    <table>
+      <tr><th>プラン</th><th>月額(税別)</th><th>内容</th></tr>
+      <tr><td>お試し</td><td>0円(初月)</td><td>請求書10件まで</td></tr>
+      <tr><td>スタンダード</td><td>50,000円</td><td>月200件まで</td></tr>
+      <tr><td>プロ</td><td>100,000円</td><td>件数無制限+月次レポート</td></tr>
+    </table>
+  </section>
+
+  <section id="contact">
+    <h2>お問い合わせ</h2>
+    <p>15分のオンライン説明、または無料トライアルのお申し込みはこちらから。</p>
+    <p><b>【問い合わせ先(メール/フォーム)を公開前に入れる】</b></p>
+  </section>
+
+  <footer class="mute">株式会社メディアビー</footer>
+</div>
+</body>
+</html>
